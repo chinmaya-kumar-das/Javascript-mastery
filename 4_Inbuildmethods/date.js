@@ -9,5 +9,5 @@ console.log(d.getMilliseconds());
 console.log(d.getHours());
 console.log(d.setFullYear("2026"));
 console.log(d.getUTCHours());
-console.log(d);
+console.log(d.toISOString());
 console.log(d);
