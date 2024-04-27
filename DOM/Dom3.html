@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set Timeout Program</title>
+  </head>
+  <body>
+    <h1 id="main">1</h1>
+    <h1 id="timer">1</h1>
+    <h2 id="int"></h2>
+    <script>
+      let x = document.getElementById("main");
+      let y = document.getElementById("timer");
+
+      function wow() {
+        x.textContent = 2;
+      }
+
+      setTimeout(wow, 2000);
+
+      function timer() {
+        let val = y.textContent;
+        
+        val++;
+        y.innerHTML = val;
+      }
+      setInterval(timer, 100);
+
+
+      //parseint
+      let int ="40"+5+"d";
+      document.getElementById('int').innerText=parseInt(int)
+    
+    </script>
+  </body>
+</html>

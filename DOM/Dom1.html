@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom 1</title>
+  </head>
+  <body>
+    <div class="1 x" id="id1"></div>
+    <div class="2 x" id="">c</div>
+    <div class="3 x" id=""></div>
+    <div class="4 x" id=""></div>
+    <div class="5 x" id="5" >w3
+    </div>
+    <abbr title="world health org">WHO</abbr>
+
+
+
+<script>
+      document.getElementById('id1').innerText="div1"
+      document.getElementsByTagName('div')[4].innerText="div5"
+      document.getElementsByClassName('x')[2].innerText="div3"
+      document.getElementsByClassName('x')[2].style.Color="red"
+      document.getElementsByClassName('x')[2].setAttribute('style','background-color:blue')
+
+
+
+      
+      // let y = document.querySelectorAll('.x');
+      // y[4].style.backgroundColor = 'red';
+      let x=document.querySelector('.x')
+      x.style.backgroundColor = 'red'
+
+  function eve() {
+    document.getElementById('5').innerText = "haaaaa";
+}
+
+document.getElementById('5').addEventListener('click', eve);
+
+// window.alert("hii")
+// window.confirm("yes")
+window.prompt("Enter data")
+</script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom 2</title>
+  </head>
+  <body>
+    <div class="container" id="containers">
+      <p>Hello list of all div</p>
+      <button onclick="newEle()">Add</button>
+      <button onclick="delEle()">Del</button>
+    </div>
+    <script>
+      var i = 1;
+      let parent = document.getElementById("containers");
+      function newEle() {
+        let newelement = document.createElement("p");
+        newelement.textContent = "New div no is " + `${i++}`;
+        parent.appendChild(newelement);
+      }
+
+      function delEle() {
+       
+        let children = parent.querySelectorAll("p");
+        if (children.length > 1) {
+          parent.removeChild(children[children.length - 1]);
+          i--;
+        }
+      }
+    </script>
+  </body>
+</html>
