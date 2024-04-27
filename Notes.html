@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding-inline: 20px;
+        align-content: center;
+        justify-content: center;
+      }
+      h3 {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <pre>
+    1.Object (5 way we can define object in js)
+--------------------------------------------
+Object is the instance of class.It means it comes with2  key pair key and value
+<h3>1-Object Literal:</h3>
+The most common way to create an object is by using the object literal notation:
+var person = {
+  name: "John",
+  age: 30,
+  isStudent: false
+};
+<h3>2: Object Constructor:</h3>
+You can use the Object constructor to create an empty object and then add properties and methods later:
+var person = new Object();
+person.name = "John";
+person.age = 30;
+person.isStudent = false;
+<h3>3: Object.create():</h3>
+You can use the Object.create() method to create a new object, with an optional prototype object:
+var personPrototype = {
+  greet: function() {
+    console.log("Hello!");
+  }
+};
+
+var person = Object.create(personPrototype);
+person.name = "John";
+person.age = 30;
+person.isStudent = false;
+<h3>4: Constructor Function:</h3>
+You can define a constructor function and use the new keyword to create instances of objects:
+function Person(name, age, isStudent) {
+  this.name = name;
+  this.age = age;
+  this.isStudent = isStudent;
+}
+var person = new Person("John", 30, false);
+<h3>5: Class (ES6 and later):</h3>
+With the introduction of ES6, you can use the class syntax to define objects with constructors and methods:
+class Person {
+  constructor(name, age, isStudent) {
+    this.name = name;
+    this.age = age;
+    this.isStudent = isStudent;
+  }
+
+  greet() {
+    console.log("Hello!");
+  }
+}
+var person = new Person("John", 30, false);
+  </pre>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arr=["chinmaya","kumar","das"]
+        function input (){
+            let match="Not Matched";
+            let data=document.getElementById("inputs");
+            for(let key in arr){
+               
+                if (arr[key]==(data.value).trim()){
+                match="Matched";
+                document.getElementById('result').innerText=match;
+                
+            }else{
+                   document.getElementById('result').innerText=match;
+
+               }
+            }
+            
+           
+
+        }
+
+
+      
+        function clicks() {
+            document.getElementById("div").style.backgroundColor = "lightblue";
+            
+        }
+    </script>
+</head>
+<body>
+    <input type="text" value="" name="input" id="inputs" onchange="input()">
+    <p id="result">Matching....</p>
+
+
+
+    <div id="div">
+        <div id="child">
+            Welcome to My World
+        </div>
+    </div>
+    <button onclick="clicks()">Click</button>
+</body>
+</html>

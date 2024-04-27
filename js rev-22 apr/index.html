@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" onsubmit="submitHandler(event)">
+        <label for="name">Name <input type="text" name="name" id="name" oninput="inputHandler(event)" /></label><br>
+        <label for="male">Male <input type="radio" name="gender" id="male" value="male" oninput="inputHandler(event)" /></label>
+        <label for="female">Female <input type="radio" name="gender" id="female" value="female" oninput="inputHandler(event)" /></label>
+        <br>  <button>Submit</button>
+    </form>
+    <label for="output">Output:</label>
+    <p id="output">Data will be displayed here...</p>
+    <script>
+        function inputHandler(event) {
+            let value = event.target.value;
+            let output = document.getElementById('output').innerText = value
+        }
+        function submitHandler(event){
+            // event.preventDefault();
+            let name = document.getElementById('name').value;
+            let gender = document.querySelector('input[name="gender"]:checked').value;
+            let data=[gender,name]
+           console.log(data)
+        }
+    </script>
+</body>
+</html>
